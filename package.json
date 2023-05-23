@@ -7,11 +7,30 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "ios-dev": "react-native run-ios --scheme=dev --configuration Debug",
+    "ios-stag": "react-native run-ios --scheme=stag --configuration Debug",
+    "ios-prod": "react-native run-ios --scheme=prod --configuration Debug",
+    "ios-dev-release": "react-native run-ios --scheme=dev --configuration Release",
+    "ios-stag-release": "react-native run-ios --scheme=stag --configuration Release",
+    "ios-prod-release": "react-native run-ios --scheme=prod --configuration Release",
+    "android-dev": "ENVFILE=.env.dev react-native run-android",
+    "android-stag": "ENVFILE=.env.stag react-native run-android",
+    "android-prod": "ENVFILE=.env.prod react-native run-android",
+    "android-dev-apk": "cd android && ./gradlew clean && ENVFILE=.env.dev ./gradlew assembleRelease",
+    "android-stag-apk": "cd android && ./gradlew clean && ENVFILE=.env.stag ./gradlew assembleRelease",
+    "android-prod-apk": "cd android && ./gradlew clean && ENVFILE=.env.prod ./gradlew assembleRelease",
+    "android-dev-release": "ENVFILE=.env.dev react-native run-android --variant Release",
+    "android-stag-release": "ENVFILE=.env.stag react-native run-android --variant Release",
+    "android-prod-release": "ENVFILE=.env.prod react-native run-android --variant Release",
+    "android-dev-aab": "cd android && ./gradlew clean && ENVFILE=.env.dev ./gradlew bundleRelease",
+    "android-stag-aab": "cd android && ./gradlew clean && ENVFILE=.env.stag ./gradlew bundleRelease",
+    "android-prod-aab": "cd android && ./gradlew clean && ENVFILE=.env.prod ./gradlew bundleRelease"
   },
   "dependencies": {
     "react": "18.2.0",
-    "react-native": "0.71.8"
+    "react-native": "0.71.8",
+    "react-native-config": "^1.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

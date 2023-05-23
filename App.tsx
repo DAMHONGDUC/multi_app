@@ -1,5 +1,6 @@
 import React from 'react';
 import {Text, View} from 'react-native';
+import Config from 'react-native-config';
 
 function App(): JSX.Element {
   return (
@@ -10,7 +11,7 @@ function App(): JSX.Element {
         flexDirection: 'column',
         flex: 1,
       }}>
-      <Text style={{color: '#f00', fontSize: 20}}>ENV</Text>
+      <Text style={{color: '#f00', fontSize: 20}}>{Config.ENV}</Text>
     </View>
   );
 }
