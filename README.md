@@ -1,4 +1,4 @@
-# Multiple Schemes and Configurations in a React Native
+# React Native Multiple Schemes & Multiple Environments Config
 
 ### Guide:
 
