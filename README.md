@@ -35,5 +35,35 @@
   ]
   apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
   ```
+  ```
+  android {
+    ...
+
+    flavorDimensions "default"
+    productFlavors {
+        dev {
+            minSdkVersion rootProject.ext.minSdkVersion
+            applicationId "com.multi_app.dev"
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            resValue "string", "build_config_package", "com.multi_app"
+        }
+        stag {
+            minSdkVersion rootProject.ext.minSdkVersion
+            applicationId "com.multi_app.stag"
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            resValue "string", "build_config_package", "com.multi_app"
+        }
+        prod {
+            minSdkVersion rootProject.ext.minSdkVersion
+            applicationId "com.multi_app"
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            resValue "string", "build_config_package", "com.multi_app"
+        }
+    }
+
+    ...
+    }
+  }
+  ```
 
 
